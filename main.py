@@ -22,9 +22,10 @@ def aoc2():
   file = open('input.txt','r')
   input = True
   last_total = 0
-  last_num1 = 0
-  last_num2 = 0
   count = 0
+
+  last_num1 = int(file.readline())
+  last_num2 = int(file.readline())
 
   while(input):
     line = file.readline()
@@ -41,6 +42,7 @@ def aoc2():
       last_num1 = last_num2
       last_num2 = new_number
 
+  #remove the first increase where last_total is zero
   count -=1
   print("Count = ", count)
 
